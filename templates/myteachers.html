@@ -1,0 +1,26 @@
+<!DOCTYPE html> #this is the code for setting up the teachers page on HTML
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+<table>
+    <caption>Teachers</caption>
+    <tr>
+        <th>teacherID</th>
+        <th>email</th>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+    {% for i in items%} #special code for using items notation -- from app.py
+    <tr>
+        <td>{{i[0]}}</td> #allows for iterating through a for loop
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td><a href="teacher_classes/{{i[0]}}">{{i[3]}}</a></td> #enabling links that can be clicked on
+    </tr>
+    {%  endfor %}
+</table>
+</body>
+</html>

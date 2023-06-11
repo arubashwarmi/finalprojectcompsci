@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Students</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Assignment ID</th>
+        <th>Leaning Indicator ID</th>
+        <th>Score</th>
+        <th>Class ID</th>
+    </tr>
+    <tr>
+    {% for i in items %}
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+    </tr>
+    {%  endfor %}
+</table>
+</body>
+</html>

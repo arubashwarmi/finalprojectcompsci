@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Students</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>studentID</th>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+    <tr>
+    {% for i in items %}
+        <td><a href="/students/{{i[0]}}">{{i[0]}}</a></td> #a way to use HTML, sort of like an f string, to allow for links and looping. To find all the elements in i, we will have to go to what we selected (through SQL) in each app decorator statement on app.py
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+    </tr>
+    {%  endfor %}
+</table>
+</body>
+</html>
